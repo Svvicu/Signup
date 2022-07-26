@@ -1,0 +1,28 @@
+@mixin square ($size, $bg) {
+    width:$size;
+    height: $size;
+    background-color: $bg;
+    border: 1px solid black;
+}
+
+@mixin text($size, $weight, $color, $space: 0) {
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+    letter-spacing: $space;
+}
+
+@mixin flex ($justify, $align, $gap:0, $direction:row) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    gap:$gap;
+    flex-direction: $direction;
+}
+
+
+
+
+
+
+

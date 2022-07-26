@@ -1,0 +1,109 @@
+@import '_variables.scss';
+@import '_mixins.scss';
+@import '_resets.scss';
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&family=Overpass:wght@300;600&display=swap');
+
+
+
+body{
+    background-color: $gray;
+
+}
+
+.block{
+   @include flex(left, center, 0, column);
+    margin: 20vh auto;
+    background-color: white;
+    width: 50%;
+}
+
+.topwrapper{
+    width: 100%;
+    padding: 50px;
+    h1{
+        @include text(24px, 700, $cyan) ;
+        padding-bottom: 30px;
+    }
+    h3{
+        @include text(16px, 700, $yellow);
+        padding-bottom: 15px;
+    }
+    p{
+        @include text(16px, 400, $blueish);
+        line-height: 150%;
+    }
+    background-color: rgb(255, 255, 255);
+}
+
+.bottomwrapper{
+    display: flex;
+    
+    .bottomleft{
+        background-color: $cyan;
+        width: 50%;
+        padding: 30px;
+        h2{
+            @include text(16px, 700, $gray);
+            padding-bottom: 15px;
+        }
+        .price{
+            @include flex(left, center, 10px);
+        }
+        .price>h3{
+            @include text(24px, 700, $gray);
+            padding-bottom: 5px;
+            
+        }
+        .price>span{
+            @include text(12px, 400, hsl(179, 68%, 70%));
+        }
+        h4{
+            @include text(12px, 400, $gray);
+            padding-bottom: 5px;
+        }
+        .signup{
+            background-color: $yellow;
+            border: 0ch;
+            color: white;
+            width: 100%;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 5px;
+            @include text(14px, 700, $gray);
+
+        }
+    }
+    .bottomright{
+        span{
+            @include text(16px, 700, $gray);
+            
+        }
+        p{
+            margin-top: 20px;
+            @include text(12px, 400, $gray);
+            line-height: 150%
+        }
+        background-color: hsl(179, 58%, 53%);
+        width: 50%;
+        padding: 30px 120px 30px 30px;
+    }
+}
+
+@media (max-width: 750px) {
+    .block{
+        width: 90%;
+    }
+    .topwrapper{
+        padding: 25px;
+    }
+    .bottomwrapper{
+        flex-direction: column;
+        .bottomleft{
+            width: 100%;
+        }
+        .bottomright{
+            width: 100%;
+        }
+    }
+    
+}
